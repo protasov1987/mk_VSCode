@@ -1867,10 +1867,9 @@ function renderOpsTable() {
     wrapper.innerHTML = '<p>Список операций пуст.</p>';
     return;
   }
-  let html = '<table><thead><tr><th>Код операции</th><th>Название</th><th>Описание</th><th>Рек. время (мин)</th><th>Действия</th></tr></thead><tbody>';
+  let html = '<table><thead><tr><th>Название</th><th>Описание</th><th>Рек. время (мин)</th><th>Действия</th></tr></thead><tbody>';
   ops.forEach(o => {
     html += '<tr>' +
-      '<td>' + escapeHtml(o.code || '') + '</td>' +
       '<td>' + escapeHtml(o.name) + '</td>' +
       '<td>' + escapeHtml(o.desc || '') + '</td>' +
       '<td>' + (o.recTime || '') + '</td>' +
